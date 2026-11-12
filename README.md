@@ -57,6 +57,30 @@ Desenvolver consultas SQL para explorar informações de cursos, alunos e matrí
 - `evidencias/04_alunos_sem_matricula_not_exists.png`
 - `evidencias/05_desafio2_resultado_final.png`
 
+### Desafio 03 — Cursos acima da média por categoria
+
+**Objetivo:** identificar cursos cujos preços são superiores à média de suas respectivas categorias.
+
+**Resultados obtidos:**
+- Total de cursos analisados: 10
+- Categorias analisadas: 5
+- Cursos acima da média de sua categoria: 5
+- Maior diferença positiva: R$ 60,00 — Python para Análise de Dados
+
+**Técnicas SQL utilizadas:**
+- Subconsultas correlacionadas para calcular médias específicas por categoria.
+- `AVG()` para calcular os preços médios.
+- `ROUND()` para arredondar os resultados.
+- `WHERE` para filtrar os cursos acima da média.
+- `ORDER BY` para ordenar os resultados.
+
+**Interpretação:** metade dos cursos possui preços superiores à média de suas respectivas categorias. Essa análise permite comparar preços dentro de grupos semelhantes, oferecendo informações para avaliar o posicionamento dos cursos no catálogo.
+
+**Código SQL:** `sql/03_cursos_acima_media_categoria.sql`
+
+**Evidência:**
+- `evidencias/06_desafio3_resultado_final.png`
+
 ## Estrutura do Projeto
 
 - `sql/` — Consultas SQL desenvolvidas.

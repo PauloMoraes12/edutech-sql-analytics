@@ -107,10 +107,61 @@ Entretanto, a ausência de matrícula não permite identificar, isoladamente, os
 
 ---
 
-## Conclusão parcial
+## Desafio 03 — Cursos acima da média por categoria
 
-Os dois primeiros desafios demonstram a aplicação de subconsultas e funções SQL na construção de indicadores educacionais.
+### Objetivo
 
-As análises permitem examinar a distribuição de preços dos cursos e identificar alunos que ainda não possuem matrículas.
+Identificar os cursos que possuem preços superiores à média de suas respectivas categorias, permitindo comparações entre cursos de um mesmo segmento.
 
-O projeto continuará com o Desafio 03, dedicado à comparação dos preços dos cursos com a média de suas respectivas categorias.
+### Metodologia
+
+Foram utilizadas subconsultas correlacionadas para calcular a média dos preços dos cursos pertencentes à mesma categoria do curso analisado.
+
+As principais técnicas SQL utilizadas foram:
+
+- `AVG()` para calcular a média dos preços.
+- Subconsultas correlacionadas para relacionar cada curso à sua categoria.
+- `WHERE` para selecionar somente os cursos acima da média.
+- `ROUND()` para arredondar os valores.
+- `ORDER BY` para organizar os resultados.
+
+### Resultados
+
+| Curso | Categoria | Preço | Média da categoria | Diferença |
+|---|---|---:|---:|---:|
+| Power BI do Zero ao Dashboard | Dados | R$ 279,90 | R$ 243,23 | +R$ 36,67 |
+| Modelagem de Dados na Prática | Dados | R$ 249,90 | R$ 243,23 | +R$ 6,67 |
+| Fundamentos de Machine Learning | IA | R$ 349,90 | R$ 339,90 | +R$ 10,00 |
+| LGPD e Ética no Uso de Dados | Negócios | R$ 219,90 | R$ 189,90 | +R$ 30,00 |
+| Python para Análise de Dados | Programação | R$ 299,90 | R$ 239,90 | +R$ 60,00 |
+
+### Interpretação de negócio
+
+Dos 10 cursos cadastrados, cinco apresentam preços superiores à média de suas respectivas categorias.
+
+O curso Python para Análise de Dados apresenta a maior diferença positiva, com preço R$ 60,00 acima da média de Programação.
+
+Essa análise permite avaliar o posicionamento relativo dos preços dentro de cada categoria, complementando a comparação com a média geral realizada no Desafio 01.
+
+### Limitações
+
+Os preços não permitem determinar, isoladamente, a rentabilidade dos cursos. Para isso, seriam necessárias informações adicionais sobre custos, matrículas e receitas.
+
+### Consulta e evidência
+
+**SQL:** `sql/03_cursos_acima_media_categoria.sql`
+
+**Evidência:**
+- `evidencias/06_desafio3_resultado_final.png`
+
+---
+
+## Conclusão geral
+
+Os três desafios demonstraram a aplicação de subconsultas, funções SQL e técnicas de análise de dados no Oracle Database.
+
+O projeto permitiu identificar cursos acima da média geral de preços, alunos sem matrícula e cursos acima da média de suas respectivas categorias.
+
+Os resultados mostram como consultas SQL podem transformar registros operacionais em indicadores úteis para análises comerciais e educacionais.
+
+Além da construção das consultas, o projeto contempla documentação técnica, interpretação dos resultados, evidências de execução e versionamento no GitHub.
