@@ -1,0 +1,22 @@
+# Configuracoes locais do VS Code
+.vscode/
+
+# Arquivos temporarios do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos temporarios e backups
+*.tmp
+*.bak
+*.log
+*~
+
+# Credenciais e configuracoes privadas
+.env
+.env.*
+*.key
+*.pem
+
+# Arquivos Python temporarios
+__pycache__/
+*.pyc
